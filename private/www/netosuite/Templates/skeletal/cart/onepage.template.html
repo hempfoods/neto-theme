@@ -38,9 +38,9 @@ $(document).ready(function() {
 </div>
 <!--##[%END IF%]##-->
 
-<!--##[%IF [@processor_account@] eq '' %]##-->
+[%if [@processor_account@] eq '' %]
 
-<!--##[%USER id:'username' if:'eq' value:''%]##-->
+[%if [@user:username@] eq 'noreg' %]
 <div class="well">
 <strong>Returning Customer? <a id="_cpy_login_link" href="javascript:void(0);">Login for <i>Express</i> Checkout</a></strong>
 <div id="_cpy_login_pl" style="[%FORM id:'login_username' if:'eq' value:''%]display:none;[%END FORM%]">
@@ -48,9 +48,9 @@ $(document).ready(function() {
 </div>
 
 </div>
-<!--##[%END USER%]##-->
+[%/if%]
 
-<!--##[%END IF%]##-->
+[%/if%]
 
 </div>
 <div class="col-xs-12 col-md-8">
