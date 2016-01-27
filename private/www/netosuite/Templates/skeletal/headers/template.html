@@ -128,7 +128,7 @@
 								<li><a href="[%url page:'account' type:'edit_account'/%]">Edit My Details</a></li>
 								<li><a href="[%url page:'account' type:'edit_address'/%]">Edit My Address Book</a></li>
 								<li class="divider"></li>
-								[%if [@user:username@]%]
+								[%if [@user:username@] ne 'noreg' %]
 									<li> <a href="[%url page:'account' type:'edit_pwd'/%]"><i class="fa fa-lock"></i> Change My Password</a> </li>
 									<li> <a href="[%url page:'account' type:'logout'/%]"><i class="fa fa-off"></i> Log Out</a> </li>
 								[%else%]
